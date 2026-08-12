@@ -120,45 +120,42 @@ Navigate to `http://localhost:8501` in your browser.
 ```text
 ai-marketing-strategy-manager/
 │
-├── marketing_agents/
-│   ├── __init__.py
-│   ├── analytics_agent.py
-│   ├── campaign_planner_agent.py
-│   ├── competitor_analysis_agent.py
-│   ├── content_strategist_agent.py
-│   ├── market_research_agent.py
-│   ├── optimization_agent.py
-│   └── orchestrator.py
+├── main.py                     # Main Streamlit entry point
+├── app.py                      # Application interface / execution logic
+├── config.py                   # Configuration and API key management
+├── agents_config.py            # Agent configuration
+├── create_diagrams.py          # Architecture diagram generation
+├── requirements.txt            # Python dependencies
+├── test_agent_run.py           # Agent execution tests
+├── tools.py                    # Shared tool utilities
+├── verify_build.py             # Project/build verification
+├── agent_architecture.png      # Agent architecture diagram
 │
-├── memory/
+├── marketing_agents/           # Specialized AI agent definitions
+│   ├── __init__.py
+│   ├── orchestrator.py
+│   ├── market_research_agent.py
+│   ├── competitor_analysis_agent.py
+│   ├── campaign_planner_agent.py
+│   ├── content_strategist_agent.py
+│   ├── analytics_agent.py
+│   └── optimization_agent.py
+│
+├── memory/                     # Shared agent context and memory
 │   ├── __init__.py
 │   └── context_manager.py
 │
-├── models/
+├── models/                     # Data models and schemas
 │   ├── __init__.py
 │   └── schemas.py
 │
-├── tools/
-│   ├── __init__.py
-│   ├── google_trends.py
-│   ├── news_fetcher.py
-│   ├── seo_analyzer.py
-│   ├── web_scraper.py
-│   └── web_search.py
-│
-├── .env
-├── .env.example
-├── .gitignore
-├── agent_architecture.png
-├── agents_config.py
-├── app.py
-├── config.py
-├── create_diagrams.py
-├── main.py
-├── requirements.txt
-├── test_agent_run.py
-├── tools.py
-└── verify_build.py
+└── tools/                      # Custom tools used by agents
+    ├── __init__.py
+    ├── google_trends.py
+    ├── news_fetcher.py
+    ├── seo_analyzer.py
+    ├── web_scraper.py
+    └── web_search.py
 ```
 
 ---
