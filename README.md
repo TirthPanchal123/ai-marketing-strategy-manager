@@ -31,36 +31,6 @@ Instead of a single prompt, the system orchestrates 6 distinct AI agents, each s
 
 ---
 
-## 🏗️ Architecture
-
-```mermaid
-graph TD
-    User([👤 User Input]) --> Context[🧠 Marketing Context]
-    Context --> MR[📊 Market Research Agent]
-    
-    subgraph Agent Pipeline
-    MR --> CA[🏢 Competitor Analysis Agent]
-    CA --> CP[📋 Campaign Planner Agent]
-    
-    CP --> HITL{🤝 Human Approval}
-    
-    HITL -- Approved --> CS[✍️ Content Strategist Agent]
-    HITL -- Rejected --> CP
-    
-    CS --> AN[📈 Analytics Agent]
-    AN --> OP[⚡ Optimization Agent]
-    end
-    
-    OP --> Final([📤 Final Strategy Report])
-    
-    style User fill:#667EEA,color:#fff
-    style Context fill:#2D3548,color:#fff
-    style Agent Pipeline fill:#1A1F2E,stroke:#667EEA,stroke-width:2px,color:#fff
-    style HITL fill:#F55036,color:#fff
-    style Final fill:#00D4AA,color:#fff
-```
-
----
 
 ## 🤖 The Agent Team
 
